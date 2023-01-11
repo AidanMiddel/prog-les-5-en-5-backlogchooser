@@ -1,8 +1,16 @@
 import './App.css';
 
+import Search from "../components/Search/Search";
+import SearchButton from "../components/SearchButton/SearchButton";
+import Display from "../components/Display/Display";
+
 function App() {
   return (
-    <h1>hi</h1>
+    <>
+      <Search />
+      <SearchButton />
+      <Display />
+    </>
   );
 }
 
