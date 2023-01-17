@@ -7,11 +7,17 @@ const Search = () => {
     const onInputChanged = (event) => {
         setInput(event.target.value);
     }
+
+    const onKeyDown = (event) => {
+        if(event.keyCode === 13){
+            console.log("enter")
+        }
+    }
     return (
         <>
             <div>
                 <label htmlFor="test">test</label>
-                <input onChange={onInputChanged} id="test" type="text" value={input}/>
+                <input onKeyDown={onKeyDown} onChange={onInputChanged} id="test" type="text" value={input}/>
             </div>
         </>
     )

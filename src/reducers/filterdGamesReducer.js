@@ -1,4 +1,4 @@
-const filterdGamesReducer = (state = [], action) => {
+const filterdGamesReducer = (state, action) => {
     if(state === undefined){
         return [];
     }

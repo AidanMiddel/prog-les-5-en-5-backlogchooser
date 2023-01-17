@@ -5,6 +5,8 @@ import SearchButton from "../components/SearchButton/SearchButton";
 import Display from "../components/Display/Display";
 
 function App() {
+
+
   return (
     <>
       <Search />
