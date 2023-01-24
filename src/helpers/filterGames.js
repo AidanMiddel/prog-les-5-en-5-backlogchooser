@@ -1,11 +1,9 @@
 import { games } from "../data/games";
 
 export const filterGames = (nameToBeSearched) => {
-    const filterd = [];
-    games.map(game => {
-        if(game.title === nameToBeSearched){
-            filterd.push(game);
+    return games.filter(game => {
+        if(game.title.toUpperCase().indexOf(nameToBeSearched.toUpperCase()) !== -1){
+            return game
         }
     })
-    return filterd
 }
