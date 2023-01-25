@@ -2,7 +2,7 @@ import "./Form.css";
 
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { filterGames } from "../../helpers/filterGames";
+import { filterGamesByTitle, filterGamesByPlatfrom } from "../../helpers/filterGames";
 
 const Form = () => {
 
@@ -39,8 +39,8 @@ const Form = () => {
     })
 
     const submit = (event) => {
-        event.preventdefault();
-        
+        event.preventDefault();
+        console.log(filterGamesByPlatfrom("ps4"))
     }
 
     return (
