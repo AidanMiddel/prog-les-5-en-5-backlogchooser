@@ -8,40 +8,44 @@ const Form = () => {
 
     const [inputs, setInputs] = useState([
         {
-            id: "test",
+            id: "title",
             value: "",
+            label: "TITLE",
         },
         {
-            id: "test2",
+            id: "platforms",
             value: "",
+            label: "PLATFORM",
         }
     ]);
-    const dispatch = useDispatch();
 
     const onInputChanged = (event) => {
         let copy = [...inputs];
         copy.map(input => {
-            if(input.id === event.target.id){
+            if (input.id === event.target.id) {
                 input.value = event.target.value;
             }
         })
         setInputs(copy);
     }
 
+    const inputsToBeRenderd = inputs.map(objectFromStateArray => {
+        return (
+            <div>
+                <label htmlFor={objectFromStateArray.id}>{objectFromStateArray.label}</label>
+                <input onChange={onInputChanged} id={objectFromStateArray.id} type="text" value={objectFromStateArray.value} />
+            </div>
+        )
+    })
+
     const submit = (event) => {
+        event.preventdefault();
         
     }
 
     return (
         <form onSubmit={submit}>
-            <div>
-                <label htmlFor="test">test</label>
-                <input onChange={onInputChanged} id="test" type="text" value={inputs[0].value}/>
-            </div>
-            <div>
-                <label htmlFor="test2">test</label>
-                <input onChange={onInputChanged} id="test2" type="text" value={inputs[1].value}/>
-            </div>
+            {inputsToBeRenderd}
             <button onClick={submit}>Zoeken</button>
         </form>
     )
