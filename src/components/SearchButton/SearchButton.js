@@ -1,7 +1,7 @@
 import "./SearchButton.css"
 
 const SearchButton = () => {
-    return(
+    return (
         <button>Zoeken</button>
     )
 }

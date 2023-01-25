@@ -1,8 +1,8 @@
 const filterdGamesReducer = (state, action) => {
-    if(state === undefined){
-        return "Aidan";
+    if (state === undefined) {
+        return [];
     }
-    if(action.type === "FILTERDGAMES"){
+    if (action.type === "FILTERDGAMES") {
         return action.payload;
     }
     return state;

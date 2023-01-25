@@ -13,8 +13,10 @@ const Search = () => {
 
     const onKeyDown = (event) => {
         if (event.keyCode === 13) {
-            console.log("enter")
-            console.log(filterGames(input));
+            dispatch({
+                type: "FILTERDGAMES",
+                payload: filterGames(input)
+            })
         }
     }
     return (

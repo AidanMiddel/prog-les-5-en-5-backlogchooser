@@ -44,14 +44,14 @@ export const games = [
     {
         title: "BIOSHOCK",
         platforms: [
-            "PS3","PC", "XBOX 360","XBOX ONE", "NINTENDO SWITCH"
+            "PS3", "PC", "XBOX 360", "XBOX ONE", "NINTENDO SWITCH"
         ],
         type: ["ACTION", "ADVENTURE", "HACK & SLASH"]
     },
     {
         title: "BIOSHOCK 2",
         platforms: [
-            "PS3","PC", "XBOX 360","XBOX ONE", "NINTENDO SWITCH"
+            "PS3", "PC", "XBOX 360", "XBOX ONE", "NINTENDO SWITCH"
         ],
         type: ["ACTION", "ADVENTURE", "HACK & SLASH"]
     },

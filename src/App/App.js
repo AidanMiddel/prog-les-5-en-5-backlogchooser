@@ -1,7 +1,6 @@
 import './App.css';
 
-import Search from "../components/Search/Search";
-import SearchButton from "../components/SearchButton/SearchButton";
+import Form from '../components/Form/Form';
 import Display from "../components/Display/Display";
 
 function App() {
@@ -9,8 +8,7 @@ function App() {
 
   return (
     <>
-      <Search />
-      <SearchButton />
+      <Form />
       <Display />
     </>
   );

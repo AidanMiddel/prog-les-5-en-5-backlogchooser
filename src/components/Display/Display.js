@@ -2,9 +2,15 @@ import { useSelector } from "react-redux";
 import "./Display.css";
 
 const Display = () => {
-    const filterdGame = useSelector(state => {return state})
+    const filterdGames = useSelector(state => { return state })
+
+    const titlesToBeRendered = filterdGames.map(game => {
+        return <h2>{game.title}</h2>
+    })
     return (
-        <h1>Game: {filterdGame}</h1>
+        <>
+            {titlesToBeRendered}
+        </>
     )
 }
 
