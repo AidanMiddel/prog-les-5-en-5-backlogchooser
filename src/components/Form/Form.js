@@ -11,11 +11,13 @@ const Form = () => {
             id: "title",
             value: "",
             label: "TITLE",
+            filter: filterGamesByTitle,
         },
         {
             id: "platforms",
             value: "",
             label: "PLATFORM",
+            filter: filterGamesByPlatfrom,
         }
     ]);
 
@@ -40,7 +42,9 @@ const Form = () => {
 
     const submit = (event) => {
         event.preventDefault();
-        console.log(filterGamesByPlatfrom("ps4"))
+        inputs.forEach(input => {
+            input.filter(input.value);
+        })
     }
 
     return (
