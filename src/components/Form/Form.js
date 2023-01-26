@@ -6,6 +6,7 @@ import { filterGamesByTitle, filterGamesByPlatfrom } from "../../helpers/filterG
 
 const Form = () => {
 
+    /*zorgt dat er meerdere input velden met id worden bijgehouden */
     const [inputs, setInputs] = useState([
         {
             id: "title",
@@ -21,6 +22,7 @@ const Form = () => {
         }
     ]);
 
+    /*houd bij wat er in de input velden word gezet */
     const onInputChanged = (event) => {
         let copy = [...inputs];
         copy.map(input => {
@@ -31,6 +33,7 @@ const Form = () => {
         setInputs(copy);
     }
 
+    /*renderd evenveel input velden als in de state staan*/
     const inputsToBeRenderd = inputs.map(objectFromStateArray => {
         return (
             <div>
@@ -40,13 +43,15 @@ const Form = () => {
         )
     })
 
+    /*als je de from submit loopt hij filterd hij de input met de array van games */
     const submit = (event) => {
         event.preventDefault();
         inputs.forEach(input => {
-            input.filter(input.value);
+            console.log(input.filter(input.value));
         })
     }
 
+    /*renderd alles op het scherm */
     return (
         <form onSubmit={submit}>
             {inputsToBeRenderd}
