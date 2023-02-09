@@ -23,6 +23,8 @@ const Form = () => {
         }
     ]);
 
+    let dispatch = useDispatch();
+
     /*houd bij wat er in de input velden word gezet */
     const onInputChanged = (event) => {
         let copy = [...inputs];
@@ -47,11 +49,14 @@ const Form = () => {
     /*als je de from submit loopt hij filterd hij de input met de array van games */
     const submit = (event) => {
         event.preventDefault();
-        let output = [];
+        let result = games;
         inputs.forEach(input => {
-            output.push(input.filter(input.value, games))
-        });
-        console.log(output)
+            result = input.filter(input.value, result);
+        })
+        dispatch({
+            type: "FILTERDGAMES",
+            payload: result
+        })
     }
 
     /*renderd alles op het scherm */
