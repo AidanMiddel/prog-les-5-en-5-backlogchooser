@@ -39,7 +39,7 @@ const Form = () => {
     /*renderd evenveel input velden als in de state staan*/
     const inputsToBeRenderd = inputs.map(objectFromStateArray => {
         return (
-            <div className="form__wrapper">
+            <div key={objectFromStateArray.id} className="form__wrapper">
                 <label className="form__label" htmlFor={objectFromStateArray.id}>{objectFromStateArray.label}</label>
                 <input className="form__input" onChange={onInputChanged} id={objectFromStateArray.id} type="text" value={objectFromStateArray.value} />
             </div>
