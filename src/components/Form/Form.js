@@ -3,6 +3,7 @@ import "./Form.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { filterGamesByTitle, filterGamesByPlatfrom } from "../../helpers/filterGames";
+import { games } from "../../data/games"
 
 const Form = () => {
 
@@ -46,9 +47,11 @@ const Form = () => {
     /*als je de from submit loopt hij filterd hij de input met de array van games */
     const submit = (event) => {
         event.preventDefault();
+        let output = [];
         inputs.forEach(input => {
-            console.log(input.filter(input.value));
-        })
+            output.push(input.filter(input.value, games))
+        });
+        console.log(output)
     }
 
     /*renderd alles op het scherm */
