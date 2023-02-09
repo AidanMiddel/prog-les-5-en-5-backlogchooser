@@ -39,7 +39,7 @@ const Form = () => {
     /*renderd evenveel input velden als in de state staan*/
     const inputsToBeRenderd = inputs.map(objectFromStateArray => {
         return (
-            <div>
+            <div className="form__wrapper">
                 <label htmlFor={objectFromStateArray.id}>{objectFromStateArray.label}</label>
                 <input onChange={onInputChanged} id={objectFromStateArray.id} type="text" value={objectFromStateArray.value} />
             </div>
@@ -61,9 +61,11 @@ const Form = () => {
 
     /*renderd alles op het scherm */
     return (
-        <form onSubmit={submit}>
-            {inputsToBeRenderd}
-            <button onClick={submit}>Zoeken</button>
+        <form className="form" onSubmit={submit}>
+            <div className="form__inputsWrapper">
+                {inputsToBeRenderd}
+            </div>
+            <button className="form__search" onClick={submit}>Zoeken</button>
         </form>
     )
 

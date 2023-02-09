@@ -1,0 +1,25 @@
+.form {
+    width: 40rem;
+    background: #eee;
+    aspect-ratio: 1/1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.form__inputsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__search {
+    
+}
