@@ -12,13 +12,13 @@ const Form = () => {
         {
             id: "title",
             value: "",
-            label: "TITLE",
+            label: "Title",
             filter: filterGamesByTitle,
         },
         {
             id: "platforms",
             value: "",
-            label: "PLATFORM",
+            label: "Platform",
             filter: filterGamesByPlatfrom,
         }
     ]);
@@ -40,8 +40,8 @@ const Form = () => {
     const inputsToBeRenderd = inputs.map(objectFromStateArray => {
         return (
             <div className="form__wrapper">
-                <label htmlFor={objectFromStateArray.id}>{objectFromStateArray.label}</label>
-                <input onChange={onInputChanged} id={objectFromStateArray.id} type="text" value={objectFromStateArray.value} />
+                <label className="form__label" htmlFor={objectFromStateArray.id}>{objectFromStateArray.label}</label>
+                <input className="form__input" onChange={onInputChanged} id={objectFromStateArray.id} type="text" value={objectFromStateArray.value} />
             </div>
         )
     })

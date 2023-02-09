@@ -13,10 +13,7 @@ html {
 body {
   font-size: 2rem;
   font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+
   background: #b92b27;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #1565C0, #b92b27);
@@ -26,4 +23,12 @@ body {
 
 }
 
-#root {}
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 5rem;
+}
