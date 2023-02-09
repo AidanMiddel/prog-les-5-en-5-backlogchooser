@@ -2,7 +2,7 @@ import "./Form.css";
 
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { filterGamesByTitle, filterGamesByPlatfrom } from "../../helpers/filterGames";
+import { filterGamesByTitle, filterGamesByPlatfrom, filterGamesByGenre } from "../../helpers/filterGames";
 import { games } from "../../data/games"
 
 const Form = () => {
@@ -20,6 +20,12 @@ const Form = () => {
             value: "",
             label: "Platform",
             filter: filterGamesByPlatfrom,
+        },
+        {
+            id: "genres",
+            value: "",
+            label: "Genres",
+            filter: filterGamesByGenre,
         }
     ]);
 
@@ -46,7 +52,7 @@ const Form = () => {
         )
     })
 
-    /*als je de from submit loopt hij filterd hij de input met de array van games */
+    /*als je de from submit loopt hij filterd hij de input met de array van games en stuurd hij dat naar de store */
     const submit = (event) => {
         event.preventDefault();
         let result = games;

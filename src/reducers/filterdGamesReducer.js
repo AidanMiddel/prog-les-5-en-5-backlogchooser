@@ -1,3 +1,4 @@
+/*krijgt de array van de gefilterde games binnen en display kan die ophalen */
 const filterdGamesReducer = (state, action) => {
     if (state === undefined) {
         return [];

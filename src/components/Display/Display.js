@@ -2,10 +2,13 @@ import { useSelector } from "react-redux";
 import "./Display.css";
 
 const Display = () => {
+    /*haalt de array van de gefilterde games binnen en zet hem in een variabele */
     const filterdGames = useSelector(state => { return state })
 
+    /*nieuw variabele om het eerste resultaat bij te houden */ 
     let firstToBeRenderd = false;
 
+    /*filterd op eerste resultaat om een recomondatie te geven*/
     const titlesToBeRendered = filterdGames.map(game => {
         if(firstToBeRenderd === false){
             firstToBeRenderd = true
